@@ -10,11 +10,13 @@
 const inputNumberUserElement = document.getElementById("input-user");
 const selectEvenOddElement = document.getElementById("select-even-odd")
 const buttonElement = document.getElementById("button")
+const listDomElement = document.querySelector("ul");
 let numberUser = 0;
 let evenOdd = "";
 let numberPC = 0;
 const max = 5;
 let somma = 0;
+let result="";
 
 buttonElement.addEventListener("click", function(){
     numberUser = parseInt(inputNumberUserElement.value);
@@ -32,10 +34,19 @@ buttonElement.addEventListener("click", function(){
     
     if(evenOdd === functionEvenOdd(somma)){
         console.log("hai vinto");
+        result = "hai vinto"
     }else{
         console.log("hai perso");
+        result = "hai perso"
     }
     
+    listDomElement.innerHTML = `
+    <li>Numero Utente: ${numberUser}</li>
+    <li>Hai scelto: ${evenOdd}</li>
+    <li>Numero PC: ${numberPC}</li>
+    <li>Somma: ${somma}</li>
+    <li>Risultato: ${result}</li>
+    `
 })
 
 
