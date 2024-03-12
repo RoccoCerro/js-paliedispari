@@ -27,5 +27,5 @@ function palindrome(string){
     return string === stringRevers;
 }
 
-console.log("Il nome inserito è palindromo? ",palindrome(stringInput));
+console.log("Il nome inserito è palindromo? ",palindrome(stringInput.toLowerCase()));
 
