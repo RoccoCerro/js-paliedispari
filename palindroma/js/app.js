@@ -18,6 +18,7 @@ console.log("ciao")
 // alla fine stampate in console un messaggio per dire all’utente il risultato del controllo
 
 const stringInput = prompt("Inserisci una parola");
+console.log(stringInput);
 
 function palindrome(string){
     let stringRevers = "";
