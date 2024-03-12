@@ -49,7 +49,6 @@ buttonElement.addEventListener("click", function(){
     `
 })
 
-
 function functionNumberPc(){
     return Math.floor(Math.random() * max) +1;    
 }
