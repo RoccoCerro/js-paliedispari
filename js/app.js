@@ -20,12 +20,12 @@ console.log("ciao")
 const stringInput = prompt("Inserisci una parola");
 
 function palindrome(string){
-    const stringRevers = "";
+    let stringRevers = "";
     for(let i = (string.length - 1); i >= 0; --i){
-        stringRevers = string[i];
+        stringRevers += string[i];
     }
-    console.log(stringRevers);
+    return string === stringRevers;
 }
 
-palindrome(stringInput);
+console.log(palindrome(stringInput))
 
