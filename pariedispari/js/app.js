@@ -8,36 +8,26 @@
 // PSEUDOCODICE
 
 const inputNumberUserElement = document.getElementById("input-user");
-let numberUser = 0;
-const evenOdd = "pari";
+const selectEvenOddElement = document.getElementById("select-even-odd")
 const buttonElement = document.getElementById("button")
+let numberUser = 0;
+let evenOdd = "";
 let numberPC = 0;
 const max = 5;
 let somma = 0;
 
 buttonElement.addEventListener("click", function(){
     numberUser = parseInt(inputNumberUserElement.value);
+    console.log("Numero Utente: ", numberUser)
+    evenOdd = selectEvenOddElement.value;
+    console.log("Hai scelto: ", evenOdd)
 
-    console.log("Numero Utente: ",numberUser)
-    
-    function functionNumberPc(){
-        return Math.floor(Math.random() * max) +1;    
-    }
-    
     numberPC = functionNumberPc();
     console.log("Numero PC: ", numberPC)
-    
+
     somma = numberPC + numberUser;
     console.log("Somma ",somma);
     
-    function functionEvenOdd(number){
-        let modulo = number % 2;
-        if(modulo === 0){
-            return "pari";
-        }else{
-            return "dispari";
-        }
-    }
     console.log(functionEvenOdd(somma))
     
     if(evenOdd === functionEvenOdd(somma)){
@@ -45,10 +35,20 @@ buttonElement.addEventListener("click", function(){
     }else{
         console.log("hai perso");
     }
-
+    
 })
 
 
+function functionNumberPc(){
+    return Math.floor(Math.random() * max) +1;    
+}
 
-
+function functionEvenOdd(number){
+    let modulo = number % 2;
+    if(modulo === 0){
+        return "pari";
+    }else{
+        return "dispari";
+    }
+}
 
